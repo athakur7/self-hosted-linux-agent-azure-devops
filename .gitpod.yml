@@ -1,13 +1,13 @@
 tasks:
-  - name: aws-cli
-    env:
-      AWS_CLI_AUTO_PROMPT: on-partial
-    before: |
-      source ./bin/install_aws_cli
+  # - name: aws-cli
+  #   env:
+  #     AWS_CLI_AUTO_PROMPT: on-partial
+  #   before: |
+  #     source ./bin/install_aws_cli
 
   - name: azure-agent
     before: | 
       source ./bin/install_azure_agent
-vscode:
-  extensions:
-    - amazonwebservices.aws-toolkit-vscode
+# vscode:
+#   extensions:
+#     - amazonwebservices.aws-toolkit-vscode
