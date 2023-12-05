@@ -4,5 +4,6 @@ cd /workspace
 mkdir myagent && cd myagent
 wget https://vstsagentpackage.azureedge.net/agent/3.230.2/vsts-agent-linux-x64-3.230.2.tar.gz
 tar zxvf vsts-agent-linux-x64-3.230.2.tar.gz
-
+./config.sh --unattended --url "$AZURE_DEVOPS_URL" --auth pat --token "$PERSONAL_ACCESS_TOKEN" --pool "$AGENT_POOL" --agent "$AGENT_NAME"
+./run.sh
 # cd $GITPOD_REPO_ROOTS
