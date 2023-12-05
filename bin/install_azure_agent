@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd /workspace
+mkdir myagent && cd myagent
+wget https://vstsagentpackage.azureedge.net/agent/3.230.2/vsts-agent-linux-x64-3.230.2.tar.gz
+tar zxvf vsts-agent-linux-x64-3.230.2.tar.gz
+
+# cd $GITPOD_REPO_ROOTS
