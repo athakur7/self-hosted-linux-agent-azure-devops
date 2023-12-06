@@ -5,13 +5,16 @@ version: '3'
 services:
   agent:
     build: .
-    env_file:
-      - ./agent.env
+    environment: 
+      - AZP_TOKEN=${AZP_TOKEN}
+      - AZP_URL=${AZP_URL}
+      - AZP_AGENT_NAME=${AZP_AGENT_NAME}
+      - AZP_POOL=${AZP_POOL}
     volumes:
-    - .:/code
-    - /var/run/docker.sock:/var/run/docker.sock
-    - /usr/bin/docker:/usr/bin/docker
-    - logvolume01:/var/log
+      - .:/code
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+      - logvolume01:/var/log
     restart: always
 volumes:
   logvolume01: {}
