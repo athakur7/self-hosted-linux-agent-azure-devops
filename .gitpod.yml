@@ -1,18 +1,7 @@
 tasks:
-  # - name: aws-cli
-  #   env:
-  #     AWS_CLI_AUTO_PROMPT: on-partial
-  #   before: |
-  #     source ./bin/install_aws_cli
-
-  # - name: azure-agent
-  #   before: | 
-  #     source ./bin/install_azure_agent
-  
   - name: Start Docker Compose
     before: |
-      docker-compose build --pull
-      docker-compose up -d
+      docker compose -f "docker-compose.yml" up -d --build
 # vscode:
 #   extensions:
 #     - amazonwebservices.aws-toolkit-vscode
